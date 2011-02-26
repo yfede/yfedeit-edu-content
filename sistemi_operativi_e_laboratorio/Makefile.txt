@@ -1,0 +1,21 @@
+# Marverti Federico (yfede@tiscali.it)
+# Flag aggiunti alla linea di comando del compilatore.
+CFLAGS = -Wall
+
+# Nome del compilatore C
+CC = gcc
+
+# Definizione dei target "simbolici"
+.PHONY : all
+
+# Il target all viene realizzato di default e corrisponde alla generazione
+# degli eseguibili indicati
+all : nfiglinpipe nfiglisincro
+
+# Regola di compilazione per passare da sorgente .c ad eseguibile.
+# $@ e` il nome del target (l'eseguibile), $< il requisito (il file .c)
+nfiglinpipe : nfiglinpipe.c
+	$(CC) $(CFLAGS) -o $@ $<
+
+nfiglisincro : nfiglisincro.c
+	$(CC) $(CFLAGS) -o $@ $<

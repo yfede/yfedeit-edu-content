@@ -1,0 +1,175 @@
+Esame di reti di calcolatori
+prova del 16 dicembre 2004
+Studente:
+numero di matricola e corso:
+
+Parte 1: risposta singola - Ogni domanda ha una sola risposta vera
+. Una risposta esatta fa acquisire il punteggio riportato a fianco della domanda
+. Una risposta errata viene calcolata: -1
+. Una risposta lasciata in bianco viene calcolata: O
+
+1. [2 pt] In una comunicazione mediante socket:
+  1. la funzione listen serve per accettare una nuova connessione
+  2. la funzione disconnect viene invocata tipicamente per chiudere la
+     comunicazione sul lato client (ma può essere usata anch sul lato server)
+  3. la funzione close viene invocata solamente dal server per chiudere la
+     comumcazione
+  4. la funzione bind si usa tipicamente a lato server
+
+2. [2 pt] Nel caso in cui un client richieda una "risoluzione ricorsiva" al name
+   server, quale sarà il comportamento del name server se non è in grado di
+   risolvere l'hostname richiesto?
+  1. ritornerà al client l'indirizzo di un altro name server da contattare.
+  2. contatterà un altro name server in grado di risolvere il nome
+  3. ritornerà sempre al client un messaggio d'errore
+  4. ritornerà al client un elenco di indirizzi di name server da poter
+     contattare
+
+3. [1 pt] Il trasferimento dei dati su di una comunicazione half-duplex può
+   avvenire:
+  1. in entrambe le direzioni, ma non simultaneamente
+  2. in entrambe le direzioni anche simultaneamente con invio ritardato nel caso
+     di collisioni
+  3. in entrambe le direzioni anche simultaneamente
+  4. in una sola direzione
+
+4. [1 pt] Chi si occupa di trasformare il nome simbolico di un host in un
+   indirizzo IP?
+  1. il server SMTP per i messaggi di posta elettronica, il server HTTP per le
+     richieste di pagine HTML
+  2. il server HTTP o il server DNS, indifferentemente
+  3. il server SMTP per i messaggi di posta elettronica, il server DNS per le
+     richieste di pagine HTML
+  4. sempre il server DNS
+
+5. [1 pt] Il Web server Apache 1.3:
+  1. prevede che ogni processo istanziato operi sempre sulla porta 80
+  2. può essere usato sia come server standalone che come server invocato da
+     inetd
+  3. istanzia un nuovo processo per eseguire ogni nuova richiesta HTTP
+  4. prevede che si specifichi a priori quanti processi helper devono essere
+     istanziati e tale numero non può più variare
+
+6. [1 pt] Il protocollo ICMP:
+  1. È alla base del comando ping, che serve per valutare quali router si
+     attraversano in un percorso da sorgente a destinatario.
+  2. È incapsulato in un segmento TCP
+  3. È un protocollo di servizio, cioè trasporta dati utente
+  4. È usato dagli host, router e gateway per comunicare informazioni
+     riguardanti il livello di rete, in particolare errori
+
+7. [2 pt] Un servizio di rete gestito mediante fork () :
+  1. ha dei problemi di concorrenza nel caso di architetture multiprocessore a
+     memoria condivisa
+  2. può essere inefficiente perché la richiesta del client deve essere comunque
+     interpretata dal processo principale
+  3. necessita di opportune funzioni di IPC per trasferire il socket restituito
+     da accept()
+  4. può essere inefficiente perché deve istanziare dinamicamente molti processi
+
+8. [1 pt] Quale fra i seguenti parametri influisce direttamente sulla velocità
+   di scaricamento di un documento via Web:
+  1. la banda di rete effettivamente disponibile fra la nostra postazione ed il
+     server Web
+  2. la larghezza di banda nominale del canale fra la nostra postazione ed il
+     server Web
+  3. la larghezza di banda nominale del canale fra la nostra postazione ed il
+     DNS
+  4. la distanza fisica fra la nostra postazione ed il server Web
+
+9. [1 pt] Un hostname:
+  1. E una sequenza di un numero arbitrario di label separate da punti
+  2. È una sequenza di 4 label separate da punti
+  3. Inizia sempre con www
+  4. Può essere assegnato contemporaneamente a più host appartenenti alla stessa
+     rete
+
+Parte 2: (possibili) risposte multiple - Ogni domanda può avere una o più
+risposte corrette
+. Ogni risposta esatta viene calcolata + 1
+. Una risposta errata viene calcolata: -0.5
+. Una risposta lasciata in bianco viene calcolata: O
+
+10.[più risposte possibili] Il routing IP:
+  1. prevede che il router iniziale imposti l'intero percorso che un pacchetto
+     dovrà seguire
+  2. ogni router si occupa solo del salto verso l'host successivo
+  3. un router può usare altre informazioni di stato oltre all'IP address di
+     destinazione come il campo TOS dell'header IP per decidere il prossimo hop
+  4. in caso di frammentazione di un pacchetto IP, il router successivo si
+     occupa della ricostruzione
+
+11.[più risposte possibili] Con riferimento ai servizi offerti e alle modalità
+   di operazione, il protocollo TCP:
+  1. fornisce un servizio di tipo best effort
+  2. effettua un buffering dei dati prima di spedirli
+  3. è orientato alla connessione, cioè comprende l'instaurazione, l'utilizzo e
+     la chiusura della connessione
+  4. permette solamente connessioni in half-duplex
+
+12.[più risposte possibili] Il file di log di un Web server può essere usato
+   per:
+  1. trovare gli indirizzi di email degli utenti e altre informazioni personali
+  2. impedire l'accesso agli utenti non autorizzati .
+  3. pianificare upgrade hardware e software per mantenere a livelli accettabili
+     le prestazioni
+  4. individuare tracce di attacchi
+
+13. [più risposte possibili] Il protocollo BGP (Border Gateway Protocol)
+  1. È lo standard de facto per il routing inter-AS
+  2. Utilizza come livello trasporto tipicamente TCP
+  3. È lo standard de facto per il routing intra-AS
+  4. Utilizza come livello trasporto tipicamente UDP
+
+14.[più risposte possibili] Un indirizzo IP di classe D:
+  1. è un indirizzo usato per il multicasting
+  2. ha nel primo byte un valore compreso tra 11100000 e 11101111
+  3. ha nel primo byte un valore compreso tra 11100000 e 11111111
+  4. è un indirizzo riservato per le reti locali
+
+15.[più risposte possibili] Il protocollo IP:
+  1. gestisce il controllo della congestione
+  2. è di tipo best effort
+  3. è privo di connessione
+  4. è affidabile
+
+16.[più risposte possibili] Nel protocollo TCP:
+  1. se il processo mittente non riceve un acknowledgment entro un intervallo di
+     time-out, il mittente ritrasmette i dati
+  2. è previsto una speciale modalità di funzionamento che prevede un negative
+     acknowledgement esplicito
+  3. tipicamente i dati sono inviati non appena il livello applicazione li rende
+     disponibili
+  4. è previsto il controllo di flusso
+
+17.[più risposte possibili] Nell'ambito del routing IP, quali tra le seguenti
+   affermazioni sono corrette?
+  1. un host (per es., un computer) può essere dotato di più interfacce di rete
+     ed avere multipli host address
+  2. un host è univòcamente identificato da un indirizzo IP, cioè dato un
+     indirizzo IP nel mondo vi è un solo host con quell'indirizzo IP
+  3. le subnet facilitano il routing dei pacchetti all'interno della rete perché
+     aiutano a mantenere ordine nell'attribuzione degli indirizzi IP di una rete
+  4. vi è una stretta correlazione fra i 4 byte dell'indirizzo IP e le label del
+     nome identificativo di un host
+
+18.[più risposte possibili] Il protocollo HTTP:
+  1. usa TCP come protocollo di trasporto
+  2. nella versione 1.1 prevede l'uso di connessioni persistenti come default
+     per il download dei Web objects
+  3. nella versione 1.1 usa per default una connessione non-persistente: ogni
+     oggetto viene trasferito usando una nuova connessione
+  4. è stateful, cioè il server conserva le informazioni riguardanti le
+     richieste dei client passati
+
+Parte 3: domande aperte
+. Ogni risposta esatta fa acquisire il punteggio indicato accanto alla domanda
+. Una risposta errata comporta una penalità che dipende dalla gravità
+  dell'errore (comunque mai superiore al punteggio della domanda)
+. Una risposta lasciata in bianco viene calcolata: O
+
+19.[3 pt] Dati un host A e un host B, mostrare con uno schema lo scambio di
+pacchetti del three way handshake, indicando i campi significativi degli
+header TCP per ciascun pacchetto scambiato (flag attivi, acknowledgement e
+sequence numbers). Qualora alcuni valori vengano inizializzati casualmente
+indicare dei valori di esempio.
